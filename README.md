@@ -24,6 +24,9 @@ Example: adding a new endpoint for a REST API or a new consumer for a messaging 
 * test: used when making changes of any kind to tests, whether adding new tests or refactoring existing tests.
 Example: adding contract tests and modifying unit tests.
 
+* build: used when making any modifications to build files and dependencies.
+Example: adding Apache Kafka dependencies.
+
 ## Getting Started
 
 ### Executing program
