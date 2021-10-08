@@ -1,4 +1,7 @@
-import { isValidName } from "./Tools/Validations"
+import {
+  isValidName,
+  isValidCPF
+ } from "./Tools/Validations"
 
 export default class EnrrolStudent {
   constructor() {
@@ -6,7 +9,8 @@ export default class EnrrolStudent {
   }
 
   execute(enrollmentRequest: any) {
-    if(isValidName(enrollmentRequest.student.name)) return true
-    throw new Error("Invalid name")
+    if(isValidName(enrollmentRequest.student.name) && isValidCPF(enrollmentRequest.student.cpf)) return true
+    if(!isValidName(enrollmentRequest.student.name)) throw new Error("Invalid name")
+    if(!isValidCPF(enrollmentRequest.student.cpf)) throw new Error("Invalid student CPF")
   }
 }
