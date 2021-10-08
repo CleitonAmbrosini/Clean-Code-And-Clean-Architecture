@@ -6,10 +6,20 @@ describe("EnrollStudent", () => {
     const enrollStudent = new EnrollStudent
     const enrollmentRequest = {
       student: {
-        name: "Ana"
+        name: "2Cleiton!"
       }
     }
     expect(() => enrollStudent.execute(enrollmentRequest)).toThrow(new Error("Invalid name"))
+  })
+
+  test("Should enroll student with a valid name", () => {
+    const enrollStudent = new EnrollStudent
+    const enrollmentRequest = {
+      student: {
+        name: "Cleiton Ambrosini"
+      }
+    }
+    expect(enrollStudent.execute(enrollmentRequest)).toEqual(true)
   })
 
 })
